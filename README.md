@@ -4,7 +4,7 @@
 
 Messanger Clone
 -
-[![GitHub stars](https://img.shields.io/github/starsfloki1250/Messanger.svg?style=social&label=Star&maxAge=2592000)](https://github.com/floki1250/Messanger/)
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
 -
 | SASS | Quasar | Font Awesome Icons |
 -
