@@ -1,7 +1,6 @@
-# Quasar App (messanger-clone)
-
 Messanger Clone
-
+-
+| SASS | QUASAR | FONTAWSEMO ICONS
 ## Install the dependencies
 ```bash
 npm install
