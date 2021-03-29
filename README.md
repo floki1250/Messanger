@@ -1,6 +1,6 @@
 Messanger Clone
 -
-| SASS | QUASAR | FONTAWSEMO ICONS
+| SASS | QUASAR | FONTAWESOME ICONS
 ## Install the dependencies
 ```bash
 npm install
