@@ -1,6 +1,6 @@
 Messanger Clone
 -
-|Vue JS|
+https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
 -
 | SASS | Quasar | Font Awesome Icons |
 -
