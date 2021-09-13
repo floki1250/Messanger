@@ -1,18 +1,7 @@
+# WeChat (wechat)
 
+messaging and social media app
 
-----------------
-Messanger Clone
------------------
-![GitHub followers](https://img.shields.io/github/followers/floki1250?style=social)
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
-
-
-
-| SASS | Quasar | Font Awesome Icons |
--
 ## Install the dependencies
 ```bash
 npm install
@@ -22,4 +11,16 @@ npm install
 ```bash
 quasar dev
 ```
-![Messanger](https://user-images.githubusercontent.com/37814393/112826099-751f4b00-9084-11eb-9b93-d42196f2fcb4.png)
+
+### Lint the files
+```bash
+npm run lint
+```
+
+### Build the app for production
+```bash
+quasar build
+```
+
+### Customize the configuration
+See [Configuring quasar.conf.js](https://v2.quasar.dev/quasar-cli/quasar-conf-js).

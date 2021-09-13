@@ -1,223 +1,155 @@
-// app global css in SCSS form
-#title-bar {
-  position: relative;
-  top: 0%;
-  background-color: $primary;
-  padding-left: 10px;
-  padding-top: 6px;
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Rubik:wght@300&display=swap");
+html,
+body {
+    margin: 0px;
+    height: 100%;
+    overflow: hidden;
 }
-.user_chat{
-  
-  font-weight: bolder;
-  padding:0px;margin:0px ;
+q-input:hover {
+    outline-color: rgb(69, 106, 230);
+    border: 2px solid #ffffff;
 }
-.active{
-  font-family: monospace ;
-  font-weight: bolder;
-  padding:0px;margin:0px ;
-  color: #2b2b2b;
+.text-txtcolor {
+    color: #122130;
 }
-.bottom-bar {
-  width: 74%;
-  position: absolute;
-  bottom: 0%;
-  margin: 0px;
-  padding: 20px;
- background-color: $secondary ;
-  border-radius: 20px;
-  display: grid;
-  grid-template-columns: 10% 80% 10%;
-  grid-template-rows: 100%;
-  gap: 0px 0px;
-  grid-template-areas: ". . .";
+.bg-txtcolor {
+    background: #122130;
 }
-
-.input-msg {
-  border-radius: 50px;
-  padding-left: 5%;
-  width: 100%;
-  height: 30px;
+.text-badgeColor {
+    color: #eaebef;
 }
-.container {
-  margin: 0px 0px 0px 353px;
-  background-image: url("../res/bg.png");
-  height: 100px;
-  background: rgb(0, 0, 0);
+.bg-badgeColor {
+    background: #eaebef;
 }
-.titleChat {
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-align: left;
-  background-color: $primary ;
-  color: $secondary ;
-  display: grid;
-  grid-template-columns: 50px 700px 50px 50px 50px 50px;
-  grid-template-rows: 50px;
-  gap: 0px 10px;
-  grid-template-areas: ". . . . . .";
-}
-.chat {
-  height: 550px;
-  background-color: transparent;
-  background-image: url("../res/bg.png");
-  background-repeat: repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-div::-webkit-scrollbar {
-  display: none;
-}
-* {
-  scrollbar-face-color: $accent;
-  margin: 0px;
-  padding: 0px;
-}
-.align-center {
-  text-align: center;
-  font-family: "Pacifico", cursive;
-  font-weight: bold;
-  color: $secondary;
-}
-
-.title {
-  outline: transparent;
-  border: transparent;
-  background-color: rgb(206, 206, 206);
-  //background-color: $dark;
-  text-align: left;
-  padding-left: 5%;
-  margin: 5px 5px 5px 2px;
-  border-radius: 10px;
-  width: 98%;
-  height: 100%;
-  font-family: "Montserrat Alternates", sans-serif;
-  box-shadow: 0px 0px 50px rgba(58, 58, 58, 0.658);
-  font-size: 25px;
-  line-height: 57px;
-
-  color: $secondary;
-
-  transition: opacity 2s;
-}
-.title:hover {
-  outline: transparent;
-  border: transparent;
-  background: linear-gradient(-80deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 3s ease infinite;
-
-  line-height: 57px;
-  color: #ffffff;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  opacity: 100%;
-  transition: opacity 2s;
-}
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-#Scroll {
-  width: 100%;
-  border-radius: 5px;
-  background-color: transparent;
-  position: relative;
-  //background: #2b2b2b;
-}
-
-#searchg {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  z-index: 1;
-  display: flex;
-  //background-color: #2b2b2b;
-}
-#cancel-btn {
-  position: absolute;
-  top: 25%;
-  left: 260px;
-  background: transparent;
-}
-.Menu-footer {
-  background: $secondary;
-  width: 100%;
-  height: fit-content;
-}
-
-input {
-  background: rgb(231, 231, 231);
-  color: #2b2b2b;
-  border: 1px;
-  width: 100%;
-}
-input:focus {
-  color: #2b2b2b;
-  outline: none;
-}
-.input-search {
-  border-radius: 2rem;
-  display: flex;
-  top: 10%;
-  left: 20%;
-  position: relative;
-  margin: 5%;
-  padding-top: 0%;
-  padding: 0.5rem;
-}
-#search-icon {
-  display: flex;
-  top: 7%;
-  left: 45%;
-  position: relative;
-  z-index: 7;
-}
-
-.list {
-  padding: 20px;
-  margin: 10px;
-}
-#app {
-  text-align: center;
-  font-size: 10px;
-}
-#Scroll2 {
-  border-radius: 5px;
-  width: 100%;
-  height: 60%;
-  //background-color: $dark;
-  background: linear-gradient(to right top, #5f5e5eb9, #078eccab);
-}
-#Scroll-i {
-  //background-color: #616161;
-  padding: 0.5%;
-  margin: 2%;
-  box-shadow: 6px 6px 50px rgba(2, 2, 2, 0.329);
+.q-badge {
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
 }
 p {
-  font-family: "Montserrat Alternates", sans-serif;
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
 }
-.name {
-  font-weight: bold;
+* {
+    transition: 0.2s ease-in-out;
 }
-//Animation
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
+::-webkit-scrollbar {
+    display: none;
 }
-.slide-fade-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+.app-name {
+    padding: 5px;
+    text-align: left;
+    font-family: "Righteous", cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: #122437;
 }
-.slide-fade-enter, .slide-fade-leave-to
-  /* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  opacity: -0.5;
+
+.userSection {
+    background: #f5f9fc;
+    border-radius: 20px;
+    margin: 0px 20px 20px 20px;
+    border: 1px solid #e9edf0;
+}
+.text {
+    text-transform: capitalize;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    padding-left: 10px;
+    font-size: 13px;
+    color: #6b7783;
+}
+.q-item {
+    border-radius: 10px;
+}
+.q-item:hover {
+    background-color: #f5f9fc;
+}
+.q-item:active {
+    background-color: #31a4fc31;
+}
+.item-rippel {
+    border-radius: 10px;
+}
+.item-rippel:hover {
+    background-color: #0091ff3a;
+}
+.item-rippel:active {
+    background-color: #31a4fc31;
+}
+.MessageSection {
+    flex: 3;
+    background: #f2f6fc;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.user {
+    display: flex;
+    flex: 1;
+    border-radius: 10px;
+}
+.user-info-1 {
+    flex: 1;
+    background: #f5f7fb;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: solid 2px #edeef7;
+    text-align: center;
+    padding: 10px;
+}
+.user-info-2 {
+    flex: 2;
+    background: #f9fbfc;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: solid 2px #edeef7;
+}
+.user-info-3 {
+    flex: 1;
+    background: #f5f7fb;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: solid 2px #edeef7;
+}
+.q-message-text--sent {
+    border-radius: 10px;
+    background: #19233b !important ;
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+}
+.q-message-text-content--sent {
+    color: #c1c7d9 !important;
+}
+.q-message-text--received {
+    border-radius: 10px;
+    background: white !important ;
+}
+.q-message-text-content--received {
+    color: #70737b !important;
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+}
+.inputmessage {
+    flex: 1;
+    background: white;
+    margin: 0px 10px 0px 10px;
+    padding: 10px 10px 5px 10px;
+    border-radius: 10px;
+    position: relative;
+    top: -1%;
+}
+.fileUpload {
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    background: white;
+    padding: 10px;
+    border: solid 2px #d1d2d6;
+    position: fixed;
+    bottom: 15%;
+    left: 40%;
 }
