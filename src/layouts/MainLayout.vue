@@ -8,7 +8,7 @@
         @click.capture="drawerClick"
         :width="300"
         :breakpoint="500"
-        class="bg-white"
+        :class="$q.dark.isActive ? 'bg-black' : 'bg-white'"
       >
         <div class="row" style="padding: 10px 0px 0px 20px">
           <q-avatar size="40px">
@@ -25,7 +25,7 @@
               dense
               round
               unelevated
-              color="black"
+              :color="$q.dark.isActive ? 'white' : 'black'"
               icon="eva-menu-outline"
               @click="miniState = true"
             />
@@ -46,7 +46,43 @@
             >
               <p>Dardour Adem</p>
               <div>
-                <q-btn color="black" flat icon="las la-cog" size="xs" round />
+                <q-btn
+                  :color="$q.dark.isActive ? 'White' : 'black'"
+                  flat
+                  icon="las la-cog"
+                  size="xs"
+                  round
+                  @click="DarkMode = true"
+                />
+                <q-dialog v-model="DarkMode">
+                  <q-card>
+                    <q-card-section>
+                      <div class="text-h5 row">
+                        <q-icon
+                          name="eva-settings-outline"
+                          style="margin: 5px"
+                        />
+
+                        <p>Settings</p>
+                      </div>
+                    </q-card-section>
+                    <q-separator />
+                    <q-card-section class="row items-center">
+                      <q-btn
+                        :color="$q.dark.isActive ? 'yellow' : 'black'"
+                        :icon="
+                          $q.dark.isActive
+                            ? 'eva-sun-outline'
+                            : 'eva-moon-outline'
+                        "
+                        label="Toggle Dark Mode"
+                        @click="$q.dark.toggle()"
+                        flat
+                        rounded
+                      />
+                    </q-card-section>
+                  </q-card>
+                </q-dialog>
               </div>
             </div>
             <p
@@ -77,7 +113,7 @@
                   dense
                   round
                   unelevated
-                  color="black"
+                  :color="$q.dark.isActive ? 'white' : 'black'"
                   icon="eva-menu-outline"
                   @click="miniState = true"
                 />
@@ -245,7 +281,11 @@
                 <q-spinner-comment color="blue-10" size="2em" />
               </div>
               <div
-                style="width: 59px; height: 100px; background: #f2f6fc"
+                :style="
+                  $q.dark.isActive
+                    ? 'width: 59px; height: 100px; background: #0e0e0e'
+                    : 'width: 59px; height: 100px; background: #f2f6fc'
+                "
               ></div>
             </div>
           </q-infinite-scroll>
@@ -278,7 +318,7 @@
                   <q-chip
                     removable
                     color="primary"
-                    text-color="white"
+                    :text-color="$q.dark.isActive ? 'black' : 'white'"
                     icon="las la-file"
                     v-if="filesCount > 0"
                     @remove="(files = null), (filesCount = 0)"
@@ -299,7 +339,7 @@
                         <q-chip
                           removable
                           color="primary"
-                          text-color="white"
+                          :text-color="$q.dark.isActive ? 'black' : 'white'"
                           icon="las la-file"
                           @remove="files.splice(i, 1), filesCount--"
                           >{{
@@ -412,20 +452,19 @@ import {
   uploadBytesResumable,
   getDownloadURL,
 } from "firebase/storage";
+import { Dark } from "quasar";
 
 initializeApp({});
 
 var uploadTask;
 export default {
   components: { ToggleActive, Emoji },
-  mounted() {
-    // Initialize Firebase
-  },
+  mounted() {},
   data() {
     return {
       loading: false,
       fileUploadValue: null,
-
+      DarkMode: false,
       index: 0,
       Sentfiles: [
         {
